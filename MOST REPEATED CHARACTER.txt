@@ -1,0 +1,37 @@
+        DECLARE str : STRING
+        DECLARE COUNT1, COUNT2, COUNT3, HIGHEST : INTEGER
+        DECLARE CHAR1, CHAR2, HIGHESTCHAR : CHARACTER
+
+        str<--""
+        COUNT1<--0
+        COUNT2<--0
+        COUNT3<--0
+        CHAR1 <--''
+        CHAR2<--''
+        HIGHESTCHAR<--''
+        HIGHEST<--0
+
+        OUTPUT"ENTER A STRING: "
+        INPUT str
+
+        FOR COUNT1<--1 To LENGTH(str)
+            CHAR1<--MID(str, COUNT1, 1)
+
+            COUNT3<--0
+
+            For COUNT2<--1 To LENGTH(str)
+                CHAR2 = Mid(str, COUNT2, 1)
+                IF CHAR1 = CHAR2 THEN
+                    COUNT3<--COUNT3 + 1
+                    END IF
+            NEXT
+            IF COUNT3 > HIGHEST THEN
+                HIGHESTCHAR<--CHAR1
+                HIGHEST<--COUNT3
+            ENDIF
+        NEXT
+
+        OUTPUT HIGHESTCHAR & " IS REPEATED " & HIGHEST & " TIMES")
+        END 
+
+  

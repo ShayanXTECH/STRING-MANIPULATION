@@ -1,0 +1,29 @@
+        INPUT str1, str2 D,: STRING
+        INPUT notpos, badpos : INTEGER
+
+        D<--""
+        str1<--""
+        str2<--""
+        notpos<--0
+        badpos<--0
+
+
+        OUTPUT"Enter a string: "
+        INPUT str1
+        str1 = UPPERCase(str1)
+
+        notpos<--InStr(str1, "NOT")
+        badpos<--InStr(str1, "BAD")
+
+        IF badpos > notpos THEN
+            str2<--LEFT(str1, notpos - 1) & "GOOD"
+            D=RIGHT(str1,LENGTH(str1)- badpos-2)
+            OUTPUT"Processed string is:" & str2 & D)
+        ELSE
+
+            OUTPUT"THIS STRING CAN NOT BE PROCESSED" 
+        END IF
+        END
+
+
+     

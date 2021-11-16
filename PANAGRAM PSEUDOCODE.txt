@@ -1,0 +1,31 @@
+        DECLARE STR1, STR2 : STRING
+        DECLARE A : INTEGER
+        DECLARE ISPANAGRAM : BOOLEAN
+        DECLARE THISCHAR : CHARACTER
+
+        THISCHAR<---''
+        STR1<---""
+        STR2<---"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+       
+        ISPANAGRAM<---True
+        A <---0
+
+        OUTPUT"ENTER A STRING: "
+        INPUT STR1
+
+        FOR A<---1 To LENGTH(STR2)
+            THISCHAR<---MID(STR1, A, 1)
+            IF LOCATE(STR1, THISCHAR) = 0 THEN
+                ISPANAGRAM<---False
+                EXIT FOR
+            END IF
+        NEXT
+
+        IF ISPANAGRAM = True THEN
+           OUTPUT"THIS STRING IS PANAGRAM"
+        ELSE
+
+           OUTPUT"THIS STRING IS NOT PANAGRAM"
+
+        End IF
+        END    

@@ -1,0 +1,33 @@
+        DECLARE STR1, STR2 : STRING
+        DECLARE THISCHAR, CHAR1, CHAR2 : CHARACTER
+        DECLARE X : INTEGER
+
+        STR1<---" "
+
+        STR1<---""
+        STR2<---""
+        THISCHAR<---''
+        CHAR1<---''
+        CHAR2<---''
+        X<---0
+
+       OUTPUT"ENTER A STRING: "
+       INPUT STR1
+
+       OUTPUT"ENTER A CHARACTER YOU WANT TO REPLACE"
+       INPUT CHAR1
+
+       OUTPUT("ENTER A CHARACTER TO REPLACE WITH")
+       INPUT CHAR2
+
+        FOR X<---1 To LENGTH(STR1)
+            THISCHAR<---MID(STR1, X, 1)
+            IF THISCHAR = CHAR1 THEN
+                STR2<---STR2 & CHAR2
+            ELSE
+                STR2<---TR2 & THISCHAR 
+            ENDIF
+        NEXT
+
+       OUTPUT"SUBSITIUTED STRING IS: " & STR2
+       END

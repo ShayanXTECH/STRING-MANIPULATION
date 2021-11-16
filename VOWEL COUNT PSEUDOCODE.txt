@@ -1,0 +1,32 @@
+        DECLARE STR : STRING
+        DECLARE THISCHAR : CHARACTER
+        DECLARE COUNTVOWEL, X : INTEGER
+
+        STR<--""
+        THISCHAR<--''
+        COUNTVOWEL<--0
+        X<--0
+
+        OUTPUT"ENTER THE STRING: "
+        INPUT STR
+
+        STR = UPPERCase(STR)
+
+        FOR X = 1 To LENGTH(STR)
+            THISCHAR = MID(STR, X, 1)
+
+             CASE OF THISCHAR
+                CASE 'A' : COUNTVOWEL = COUNTVOWEL + 1
+                CASE 'E' : COUNTVOWEL = COUNTVOWEL + 1
+                CASE 'I' : COUNTVOWEL = COUNTVOWEL + 1
+                CASE 'O' : COUNTVOWEL = COUNTVOWEL + 1
+                CASE 'U' : COUNTVOWEL = COUNTVOWEL + 1
+
+             END CASE
+
+
+
+        NEXT
+
+       OUTPUT"VOWEL COUNTED ARE: " & COUNTVOWEL
+       END
